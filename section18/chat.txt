@@ -1,0 +1,4 @@
+mario
+luige
+luige<script>alert('die');<script><script>alert('die');<script>
+<script>alert('die');<script>
