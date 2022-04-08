@@ -1,0 +1,1 @@
+-- create table photo(id int primary key AUTO_INCREMENT, type varchar(50),data MEDIUMBLOB);
