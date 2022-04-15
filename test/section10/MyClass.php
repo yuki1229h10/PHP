@@ -11,11 +11,25 @@
 //     }
 // }
 
+// class MyClass
+// {
+//     public static function square(float $width, float $height): float
+//     {
+//         return $width * $height;
+//     }
+// }
+// print MyClass::square(10, 5);
+
 class MyClass
 {
-    public static function square(float $width, float $height): float
+    public string $pub = 'public';
+    protected string $pro = 'protected';
+    private string $pri = 'private';
+
+    public function showProperty(): void
     {
-        return $width * $height;
+        foreach ($this as $key => $value) {
+            print "{$key}:{$value}<br />";
+        }
     }
 }
-print MyClass::square(10, 5);
