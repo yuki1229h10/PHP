@@ -41,3 +41,31 @@ echo $obj2->public;
 // echo $obj2->protected;
 // echo $obj2->private;
 $obj2->printHello();
+
+
+class Super
+{
+  protected function protectedFunc()
+  {
+    echo "Protected\n";
+  }
+  private function privateFunc()
+  {
+    echo "Private\n";
+  }
+}
+
+$super = new Super;
+// $super->protectedFunc(); // error
+// $super->privateFunc(); // error
+
+class Sub extends Super
+{
+  public function publicFunc()
+  {
+    parent::protectedFunc();
+  }
+}
+
+$sub = new Sub();
+$sub->publicFunc();
